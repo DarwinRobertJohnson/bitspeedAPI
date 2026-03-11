@@ -40,7 +40,7 @@ function generateResponse(res:Response,contacts:Array<contact>,oldest:{id:number
                 }});
 }
 
-app.post("/", async (req: Request, res: Response) => {
+app.post("/identify", async (req: Request, res: Response) => {
 
     let contacts = await prisma.contact.findMany({
         where:{
